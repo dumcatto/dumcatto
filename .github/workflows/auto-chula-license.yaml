@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: CU Auto Licenser
         id: auto-license
-        uses: dumcatto/auto-chula-license@v1.0.2
+        uses: tonklaw/auto-chula-license@v1.0.2
         with:
           cunet-email: ${{ secrets.CUNET_EMAIL }}
           cunet-password: ${{ secrets.CUNET_PASSWORD }}
