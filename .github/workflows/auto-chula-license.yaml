@@ -1,0 +1,18 @@
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '30 0 * * 0'
+
+jobs:
+  license-borrower:
+    runs-on: ubuntu-latest
+    name: License Borrower for CU license portal
+    steps:
+      - name: CU Auto Licenser
+        id: auto-license
+        uses: dumcatto/auto-chula-license@v1.0.1
+        with:
+          cunet-email: ${{ secrets.CUNET_EMAIL }}
+          cunet-password: ${{ secrets.CUNET_PASSWORD }}
+          license-id: 5
